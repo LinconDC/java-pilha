@@ -14,9 +14,13 @@ public class Fluxo {
 
 	private static void metodo2() {
 		System.out.println("Ini do metodo2");
-		for(int i = 1; i <= 5; i++) {
+		for (int i = 1; i <= 5; i++) {
 			System.out.println(i);
-			int a = i / 0;
+			try {
+				int a = i / 0;
+			} catch (ArithmeticException ex) {
+				System.out.println("Arithmetics Exception");
+			}
 		}
 		System.out.println("Fim do metodo2");
 	}
